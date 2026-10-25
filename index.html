@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>El Fogón Pizza a la Leña</title>
+    <meta name="claude:viewport-fit-sides" content="cover" />
+    <!-- DEMO: quitar esta línea al publicar en el dominio del cliente -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Pizza a la leña de masa delgada, pastas y clericot en Jardines del Nilo, Guadalajara. Abierto de lunes a domingo. Reserva por WhatsApp al 33 2874 0506."
+    />
+    <meta
+      property="og:title"
+      content="El Fogón Pizza a la Leña · Jardines del Nilo, Guadalajara"
+    />
+    <meta
+      property="og:description"
+      content="Pizza delgada al horno de leña, pastas y clericot. Reserva por WhatsApp."
+    />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:locale" content="es_MX" />
+    <!-- TODO: og:image con una foto real del horno (1200x630) -->
+    <meta name="theme-color" content="#1E1714" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,600;0,700;1,500&family=Work+Sans:wght@400;500;600&family=Courgette&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "El Fogón Pizza a la Leña",
+        "slogan": "El arte de hacer pizza",
+        "telephone": "+52 33 2874 0506",
+        "priceRange": "$$",
+        "servesCuisine": ["Pizza", "Italiana"],
+        "acceptsReservations": true,
+        "hasMenu": "#menu",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "C. Cipriano Campos Alatorre 882, Col. Jardines del Nilo",
+          "addressLocality": "Guadalajara",
+          "addressRegion": "Jalisco",
+          "postalCode": "44820",
+          "addressCountry": "MX"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 20.6484082,
+          "longitude": -103.2881439
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "14:30",
+            "closes": "23:30"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.5",
+          "reviewCount": "1373"
+        },
+        "sameAs": [
+          "https://www.instagram.com/elfogon.gdl/",
+          "https://www.facebook.com/ElFogonCipriano"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="saltar" href="#menu">Saltar al menú</a>
+
+    <!-- ============ NAVEGACIÓN ============ -->
+    <header class="nav" id="inicio">
+      <div class="nav__in">
+        <a class="marca" href="#inicio" aria-label="El Fogón, inicio">
+          <!-- TODO: reemplazar este bloque por el logo real: <img src="img/logo.svg" alt="El Fogón Pizza a la Leña"> -->
+          <svg class="marca__arco" viewBox="0 0 64 36" aria-hidden="true">
+            <use href="#arco" />
+          </svg>
+          <span class="marca__txt"
+            ><b>El Fogón</b><small>Pizza a la leña</small></span
+          >
+        </a>
+        <button
+          class="nav__btn"
+          id="nav-btn"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span class="sr">Abrir menú</span><i></i><i></i><i></i>
+        </button>
+        <nav class="nav__links" id="nav-links" aria-label="Secciones">
+          <a href="#menu">Menú</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#resenas">Reseñas</a>
+          <a href="#visitanos">Visítanos</a>
+          <a class="btn btn--brasa btn--chico" data-wa href="#">Reservar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img
+          class="hero__foto"
+          src="img/hero-horno.jpg"
+          alt=""
+          width="1125"
+          height="1201"
+          fetchpriority="high"
+        />
+        <div class="hero__in">
+          <div class="hero__txt">
+            <p class="eyebrow">Jardines del Nilo · Guadalajara</p>
+            <h1>Pizza a la leña, delgada y crujiente, para cenar sin prisa.</h1>
+            <p class="hero__lema">"El arte de hacer pizza"</p>
+            <p class="hero__rating">
+              <span class="estrellas" aria-hidden="true">★★★★★</span>
+              <b>4.5</b> en Google · más de 1,300 reseñas
+            </p>
+            <div class="hero__ctas">
+              <a class="btn btn--brasa" data-wa href="#"
+                >Reservar por WhatsApp</a
+              >
+              <a class="btn btn--linea" href="#menu">Ver el menú</a>
+            </div>
+            <p class="hero__abierto" data-horario-hoy>
+              Abierto todos los días de 2:30 pm a 11:30 pm
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ajedrez" aria-hidden="true"></div>
+
+      <!-- ============ EL HORNO / HISTORIA ============ -->
+      <section class="seccion historia" id="historia">
+        <div class="envoltura">
+          <div class="historia__txt">
+            <p class="eyebrow eyebrow--vino">El horno</p>
+            <h2>La leña hace la diferencia.</h2>
+            <!-- TODO: reemplazar con la historia real (año de apertura, quién lo fundó, de dónde viene la receta) -->
+            <p>
+              Cada pizza entra al horno de leña y sale con la orilla dorada, el
+              centro delgado y ese sabor ahumado autentico. Y para complementar,
+              pastas cremosas, una copa de vino o una jarra de clericot.
+            </p>
+            <p>
+              De noche, con la luz cálida y buena música, El Fogón es el lugar
+              ideal para cenar en pareja, con la familia o con amigos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ajedrez" aria-hidden="true"></div>
+
+      <!-- ============ FAVORITOS ============ -->
+      <section class="seccion favoritos" id="favoritos">
+        <div class="envoltura">
+          <div class="titular">
+            <p class="eyebrow eyebrow--vino">Favoritos de la casa</p>
+            <h2>Lo que más piden</h2>
+          </div>
+          <div class="tarjetas">
+            <article class="tarjeta">
+              <div class="tarjeta__foto">
+                <img
+                  class="recorte recorte--1"
+                  src="img/pizzas.jpg"
+                  alt="Pizzas a la leña de El Fogón"
+                  width="1125"
+                  height="1482"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="tarjeta__cuerpo">
+                <h3>Pizza El Fogón</h3>
+                <p>
+                  Espinaca fresca, jamón serrano, champiñones y aceituna negra.
+                </p>
+                <span class="precio">$270</span>
+              </div>
+            </article>
+            <article class="tarjeta">
+              <div class="tarjeta__foto">
+                <img
+                  class="recorte recorte--2"
+                  src="img/pizzas.jpg"
+                  alt="Pizza Mexicana con carne molida, pimiento y cebolla morada"
+                  width="1125"
+                  height="1482"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="tarjeta__cuerpo">
+                <h3>Pizza Mexicana</h3>
+                <p>Carne molida, pimiento, cebolla morada y chile jalapeño.</p>
+                <span class="precio">$270</span>
+              </div>
+            </article>
+            <article class="tarjeta">
+              <div class="tarjeta__foto">
+                <img
+                  class="recorte recorte--3"
+                  src="img/pizzas.jpg"
+                  alt="Pizzas a la leña de El Fogón"
+                  width="1125"
+                  height="1482"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="tarjeta__cuerpo">
+                <h3>Tres Regalos</h3>
+                <p>
+                  Fettuccini Alfredo con camarones, pollo a la mantequilla y
+                  queso azul.
+                </p>
+                <span class="precio">$295</span>
+              </div>
+            </article>
+            <article class="tarjeta">
+              <div class="tarjeta__foto">
+                <img
+                  class="recorte recorte--4"
+                  src="img/pizzas.jpg"
+                  alt="Pizzas a la leña de El Fogón"
+                  width="1125"
+                  height="1482"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="tarjeta__cuerpo">
+                <h3>Fettuccini al pesto</h3>
+                <p>Pesto de albahaca, pollo a la parrilla y champiñones.</p>
+                <span class="precio">$220</span>
+              </div>
+            </article>
+            <article class="tarjeta">
+              <div class="tarjeta__foto">
+                <img
+                  class="recorte recorte--5"
+                  src="img/pizzas.jpg"
+                  alt="Pizzas a la leña de El Fogón"
+                  width="1125"
+                  height="1482"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="tarjeta__cuerpo">
+                <h3>Clericot</h3>
+                <p>Vino tinto con fruta, para acompañar la pizza.</p>
+                <span class="precio">$120</span>
+              </div>
+            </article>
+            <article class="tarjeta tarjeta--cta">
+              <p class="guion">¿Mitad y mitad?</p>
+              <p>
+                Pide tu pizza combinada, como la favorita de muchos: mitad
+                Mexicana, mitad Siciliana.
+              </p>
+              <a class="btn btn--crema btn--chico" href="#menu"
+                >Ver todas las pizzas</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MENÚ ============ -->
+      <section class="seccion menu" id="menu">
+        <div class="envoltura">
+          <div class="titular titular--centro">
+            <p class="guion guion--grande">Menú</p>
+            <p class="menu__nota">Precios en pesos mexicanos.</p>
+          </div>
+          <div
+            class="pestanas"
+            role="tablist"
+            aria-label="Categorías del menú"
+            id="pestanas"
+          ></div>
+          <div
+            class="carta"
+            id="carta"
+            role="tabpanel"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCIA ============ -->
+      <section class="seccion experiencia" id="experiencia">
+        <div class="envoltura">
+          <div class="titular">
+            <p class="eyebrow">La experiencia</p>
+            <h2>Una mesa para cada plan</h2>
+          </div>
+          <div class="planes">
+            <div class="plan">
+              <h3>En pareja</h3>
+              <p>
+                Luz cálida, buena música y una pizza para compartir. Las noches
+                en El Fogón son tranquilas y sin prisa.
+              </p>
+            </div>
+            <div class="plan">
+              <h3>En familia</h3>
+              <p>
+                Pizzas clásicas para los niños, pastas para los grandes y
+                estacionamiento accesible para silla de ruedas.
+              </p>
+            </div>
+            <div class="plan">
+              <h3>Con amigos</h3>
+              <p>
+                Pizzas mitad y mitad, alitas a la leña, cervezas y una jarra de
+                clericot al centro.
+              </p>
+            </div>
+          </div>
+          <aside class="desayunos">
+            <div>
+              <p class="guion">Desayunos</p>
+              <p class="desayunos__dias">Sábados y domingos</p>
+            </div>
+            <!-- TODO: horario y platillos de desayuno -->
+            <p>
+              Los sábados y domingos también hay desayunos. Pregunta por el
+              horario y el menú por WhatsApp.
+            </p>
+            <a class="btn btn--brasa btn--chico" data-wa="desayuno" href="#"
+              >Preguntar por WhatsApp</a
+            >
+          </aside>
+        </div>
+      </section>
+
+      <!-- ============ RESEÑAS ============ -->
+      <section class="seccion resenas" id="resenas">
+        <div class="envoltura resenas__grid">
+          <div class="resenas__nota">
+            <p class="eyebrow eyebrow--vino">Reseñas en Google</p>
+            <p class="calif"><span>4.5</span><small>de 5</small></p>
+            <p
+              class="estrellas estrellas--vino"
+              aria-label="4.5 de 5 estrellas"
+            >
+              ★★★★★
+            </p>
+            <p>Más de 1,300 personas han calificado El Fogón en Google.</p>
+            <a
+              class="btn btn--vino btn--chico"
+              data-cfg-href="resenasGoogle"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              >Ver todas en Google</a
+            >
+          </div>
+          <!-- TODO: confirmar con el cliente; son frases destacadas por Google en su ficha -->
+          <div class="citas">
+            <blockquote>
+              <p>
+                No se pierdan la pizza mixta, mitad mexicana y mitad chorizo.
+                ¡Exquisita!
+              </p>
+              <cite>Cliente en Google</cite>
+            </blockquote>
+            <blockquote>
+              <p>
+                Las pizzas muy ricas y delgadas, las pastas también muy
+                deliciosas.
+              </p>
+              <cite>Cliente en Google</cite>
+            </blockquote>
+            <blockquote>
+              <p>Ricas pizzas y pasta, buen ambiente.</p>
+              <cite>Cliente en Google</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VISÍTANOS ============ -->
+      <section class="seccion visitanos" id="visitanos">
+        <div class="envoltura visitanos__grid">
+          <div>
+            <p class="eyebrow">Visítanos</p>
+            <h2>Cipriano Campos Alatorre 882</h2>
+            <p class="direccion">
+              Col. Jardines del Nilo, 44820<br />Guadalajara, Jalisco
+            </p>
+            <dl class="horario">
+              <div>
+                <dt>Lunes a domingo</dt>
+                <dd data-horario>2:30 pm – 11:30 pm</dd>
+              </div>
+              <div>
+                <dt>Desayunos</dt>
+                <dd>Sábados y domingos</dd>
+              </div>
+            </dl>
+            <p class="telefono">
+              Reservaciones <a data-tel href="#">33 2874 0506</a>
+            </p>
+            <div class="acciones">
+              <a class="btn btn--brasa" data-wa href="#">WhatsApp</a>
+              <a class="btn btn--crema" data-tel href="#">Llamar</a>
+              <a
+                class="btn btn--linea"
+                data-cfg-href="mapa"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >Cómo llegar</a
+              >
+              <a
+                class="btn btn--linea"
+                data-cfg-href="didi"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                >Pedir en DiDi Food</a
+              >
+            </div>
+          </div>
+          <div class="mapa-google">
+            <iframe
+              src="https://maps.google.com/maps?q=El%20Fog%C3%B3n%20Pizza%20A%20La%20Le%C3%B1a%2C%20C.%20Cipriano%20Campos%20Alatorre%20882%2C%20Jardines%20del%20Nilo%2C%20Guadalajara&z=17&output=embed"
+              title="Mapa de El Fogón Pizza a la Leña"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ PIE ============ -->
+    <footer class="pie">
+      <div class="envoltura pie__grid">
+        <div class="marca marca--pie">
+          <svg class="marca__arco" viewBox="0 0 64 36" aria-hidden="true">
+            <use href="#arco" />
+          </svg>
+          <span class="marca__txt"
+            ><b>El Fogón</b><small>Pizza a la leña</small></span
+          >
+        </div>
+        <p>
+          C. Cipriano Campos Alatorre 882, Col. Jardines del Nilo, Guadalajara,
+          Jal.<br />
+          Tel. <a data-tel href="#">33 2874 0506</a>
+        </p>
+        <p class="redes">
+          <a data-cfg-href="instagram" href="#" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+          <a data-cfg-href="facebook" href="#" target="_blank" rel="noopener"
+            >Facebook</a
+          >
+        </p>
+        <p class="pie__legal">
+          <span>© <span id="anio">2026</span> El Fogón Pizza a la Leña</span>
+          ><!-- TODO: aviso de privacidad -->
+          <a
+            href="https://alemanmanuel99-gif.github.io/lightspeed-web/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__dev-credit"
+          >
+            <span>Desarrollado por</span>
+            <svg
+              class="footer__dev-credit-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2z" />
+            </svg>
+            <span class="footer__dev-credit-brand">Lightspeed</span>
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- ============ BARRA MÓVIL ============ -->
+    <nav class="barra" aria-label="Acciones rápidas">
+      <a data-wa href="#"
+        ><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"
+          /></svg
+        >WhatsApp</a
+      >
+      <a data-tel href="#"
+        ><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.6 3h3l1.5 4-2 1.3a11 11 0 0 0 6.6 6.6l1.3-2 4 1.5v3a2 2 0 0 1-2 2A17 17 0 0 1 4.6 5a2 2 0 0 1 2-2z"
+          /></svg
+        >Llamar</a
+      >
+      <a data-cfg-href="mapa" href="#" target="_blank" rel="noopener"
+        ><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z" />
+          <circle cx="12" cy="9" r="2.5" /></svg
+        >Cómo llegar</a
+      >
+    </nav>
+
+    <!-- Símbolo del arco del horno (marca temporal) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="arco" viewBox="0 0 64 36">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        >
+          <path d="M6 30 A26 26 0 0 1 58 30" />
+          <path d="M16 30 A16 16 0 0 1 48 30" />
+          <path
+            d="M32 4 V14 M13.6 11.6 L20.7 18.7 M50.4 11.6 L43.3 18.7 M7.6 21 L17 24 M56.4 21 L47 24"
+          />
+          <path d="M4 30 H60" />
+        </g>
+        <path
+          d="M25 30c-2-5 2-7 1-11 4 3 5 7 3 11zM31 30c-3-7 3-10 1-15 5 4 6 10 4 15zM37 30c-2-5 2-7 1-10 4 3 4 7 2 10z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
+    <script src="menu.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
