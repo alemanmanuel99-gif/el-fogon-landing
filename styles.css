@@ -1210,3 +1210,34 @@ p {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+/* ---------- Hero: ocupa justo una pantalla ---------- */
+.hero h1 {
+  font-size: clamp(2.1rem, 1.4rem + 3vw, 3.4rem);
+}
+.hero__txt {
+  gap: 16px;
+}
+.hero__in {
+  grid-template-columns: minmax(0, 640px);
+  min-height: calc(100vh - 68px - 22px);
+  min-height: calc(100svh - 68px - 22px - env(safe-area-inset-top, 0px));
+  padding-block: 40px;
+}
+
+@media (max-width: 900px) {
+  .hero__foto {
+    height: 400px;
+  }
+  .hero::after {
+    background: linear-gradient(
+      180deg,
+      rgba(30, 23, 20, 0.1) 0%,
+      rgba(30, 23, 20, 0.45) 170px,
+      var(--carbon) 380px
+    );
+  }
+  .hero__in {
+    min-height: 0;
+    padding-top: 220px;
+  }
+}
